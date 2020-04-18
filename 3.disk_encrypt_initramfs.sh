@@ -20,7 +20,7 @@ SHA1SUM_EXT="$(dd bs=4k count=$BLOCK_COUNT if=/dev/sda | sha1sum)"
 if [ "$SHA1SUM_ROOT" == "$SHA1SUM_EXT" ]; then
 	echo "1.Sha1sums match."
 	#cryptsetup --cipher aes-cbc-essiv:sha256 luksFormat /dev/mmcblk0p2
-	cryptsetup -c aes-xts-plain64 luksFormat /dev/mmcblk0p2
+	cryptsetup -c aes-xts-plain64 -s 512 -h sha512 -y luksFormat /dev/mmcblk0p2
 	cryptsetup luksOpen /dev/mmcblk0p2 sdcard
 	dd bs=4k count=$BLOCK_COUNT if=/dev/sda of=/dev/mapper/sdcard
 	NEWBLOCK_COUNT="$(dumpe2fs /dev/mapper/sdcard | sed "s/ //g" | sed -n "/Blockcount:/p" | cut -d ":" -f 2)"
