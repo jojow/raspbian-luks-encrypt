@@ -10,11 +10,11 @@ Hello,
 I was searching for a way to Luks encrypt my root folder but all the tutorials I found were for Jessie and weren't very noob friendly so I decided to bundle them into a few automated scripts to make the job easier.
 
 The tutorials I got most of the info from are here:
-https://robpol86.com/raspberry_pi_luks.html
-https://github.com/johnshearing/MyEther ... encryption
+- https://robpol86.com/raspberry_pi_luks.html
+- https://github.com/johnshearing/PrivateKeyVault
 
 I've uploaded the scripts here:
-https://github.com/styper/Luks-Encrypt-Raspbian-Stretch
+- https://github.com/styper/Luks-Encrypt-Raspbian-Stretch
 
 What you need:
 - A Raspberry PI 3
