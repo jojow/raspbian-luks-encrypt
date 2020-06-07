@@ -28,8 +28,8 @@ cp -R /usr/share/tcltk/* ${DESTDIR}/lib/
 # Raspberry Pi 1 and 2+3 use different kernels. Include the other.
 if ${COMPATIBILITY}; then
   case "${version}" in
-    *-v7+) other_version="$(echo ${version} |sed 's/-v7+$/+/')" ;;
-    *+) other_version="$(echo ${version} |sed 's/+$/-v7+/')" ;;
+    *-v7l+) other_version="$(echo ${version} |sed 's/-v7l+$/+/')" ;;
+    *+) other_version="$(echo ${version} |sed 's/+$/-v7l+/')" ;;
     *)
       echo "Warning: kernel version doesn't end with +, ignoring."
       exit 0
