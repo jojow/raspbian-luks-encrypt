@@ -25,7 +25,8 @@ This tutorial should be usable with an already running Raspbian Stretch, just sk
 
 Burn the Raspbian Stretch image to the SDCard using Etcher or a similiar tool
 
-Download the scripts from the repo and place them inside /boot/install/
+Download the scripts from the repo and place them inside **/boot/install/**
+(USE EXACTLY THIS DIRECTORY BECAUSE SOME HARDCODED STUFF INSIDE THE SCRIPTS!)
 
 Run script:
 ````
